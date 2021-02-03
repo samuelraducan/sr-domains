@@ -6,7 +6,7 @@
   --color-body: #918ca4;
 }
 
-/* Typography */
+/* important => Typography */
 html {
   font-size: 62.5%;
 }
@@ -60,7 +60,7 @@ p {
   }
 }
 
-/* Links */
+/* important => Links */
 a {
   text-decoration: none;
 }
@@ -93,7 +93,7 @@ a {
   }
 }
 
-/* Badges */
+/* important => Badges */
 .badge {
   border-radius: 20px;
   font-size: 2rem;
@@ -126,7 +126,7 @@ a {
   }
 }
 
-/* Lists */
+/* important: Lists */
 
 .list {
   list-style: none;
@@ -153,4 +153,26 @@ a {
   .list--tick .list__item {
     padding-left: 0;
   }
+}
+
+/* important: Icons */
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon-container {
+  background: #f3f9fa;
+  /* We are using px because the the size won't change (mobile, desktop.. tablet */
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  /* Align the icon in the center */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
