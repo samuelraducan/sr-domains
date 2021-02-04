@@ -254,6 +254,11 @@ a {
   color: #fff;
 }
 
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 .btn--block {
   width: 100%;
   /* For anchor elements */
@@ -521,5 +526,50 @@ a {
 
   .testimonial__image > .icon-container {
     visibility: hidden;
+  }
+}
+
+/* important: Callouts */
+
+.callout {
+  padding: 4rem;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+}
+
+.callout__heading {
+  color: #fff;
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.callout .btn {
+  /* This comes from grid */
+  justify-self: center;
+  align-self: center;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  /* Makes the text wide enough on one column to take up the whole space */
+  .callout .grid--cols-2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    /* Grid */
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
