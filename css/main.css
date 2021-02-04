@@ -172,6 +172,15 @@ a {
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
+.icon--white {
+  fill: #fff;
+}
+
 .icon--primary {
   fill: var(--color-primary);
 }
@@ -186,6 +195,10 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
 }
 
 /* important:  Buttons -> Mobile first ...*/
@@ -434,14 +447,14 @@ a {
 
 @media screen and (min-width: 1024px) {
   .quote {
-    font-style: 2rem;
+    font-size: 2rem;
   }
   .quote__text {
     font-size: 2rem;
   }
 
   .quote__author {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 
   .quote__organization {
@@ -463,5 +476,50 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--cols-3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* important: TESTIMONIALS */
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+/* Target directly the image that is inside the div container */
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author,
+  .testimonial .quote__text,
+  .testimonial .quote__organization {
+    font-size: 2rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .testimonial .quote,
+  .testimonial .quote__author,
+  .testimonial .quote__text,
+  .testimonial .quote__organization {
+    font-size: 1.4rem;
+  }
+
+  .testimonial__image > .icon-container {
+    visibility: hidden;
   }
 }
