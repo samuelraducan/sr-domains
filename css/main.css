@@ -341,12 +341,28 @@ a {
   background: var(--color-secondary);
   color: #fff;
 }
+.card--accent .card__header {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.card--primary .badge--primary {
+  background: #126de4;
+}
 
 .card--secondary .badge--secondary {
   background: #02cdf1;
 }
 
+.card--accent .badge--accent {
+  background: #ec3000;
+}
+
 /* important: Plans */
+.plan {
+  transition: transform 0.3s ease-out;
+}
+
 .plan__name {
   color: #fff;
   margin: 0;
@@ -377,6 +393,10 @@ a {
   margin-bottom: 2rem;
 }
 
+.plan--popular {
+  transform: scale(1.1);
+}
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -389,6 +409,14 @@ a {
   position: absolute;
   top: -3px;
   right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -773,4 +801,16 @@ a {
     /* Minimum and maximum (minmax) -> responsive design */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
+}
+
+/* important: Plans Block */
+.block-plans .grid {
+  /* Distance between rows and columns */
+  gap: 8rem 4rem;
+}
+
+/* No media query, but give a width to all the cards in this specific container */
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
 }
